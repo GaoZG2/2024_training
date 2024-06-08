@@ -1,0 +1,2 @@
+In Python you can learn how to define a class.
+In Python you can calculate a kind of output of different expressions.
