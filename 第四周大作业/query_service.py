@@ -7,6 +7,7 @@ from starlette.requests import Request
 from pathlib import Path
 import uvicorn
 
+# 创建 FastAPI 实例
 app = FastAPI(title="query service")
 
 # 定义类 DataInfo，与数据库中的data_info表进行交互
@@ -29,7 +30,9 @@ class DataInfo(Base):
     image_size = Column(Integer)
     pointcloud_size = Column(Integer)
 
+# 定义数据库的连接URL
 DATABASE_URL = "mysql+pymysql://root:root@hadoop104:3306/autodata"
+
 # 创建数据库引擎
 engine = create_engine(DATABASE_URL)
 
@@ -104,7 +107,7 @@ async def get_image_path(image_name: str, request: Request):
     # 获取 URL
     image_url = request.url_for("download_image", image_name=image_name)
     # 返回图片的下载URL
-    return {"image_ur;": image_url}
+    return {"image_ur: ": image_url}
 
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=8000)

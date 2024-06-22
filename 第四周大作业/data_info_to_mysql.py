@@ -1,6 +1,8 @@
 import pymysql
 import json
 
+# SQLAlchemy
+
 # 数据库连接配置
 config = {
     'user': 'root',
@@ -49,14 +51,17 @@ try:
     # 文件未找到的错误处理逻辑
 except FileNotFoundError as fnf_err:
     print(f"文件未找到，错误信息: {fnf_err}")
+    exit(1)
 
     # JSON解码错误的处理逻辑
 except json.JSONDecodeError as json_err:
     print(f"JSON解码错误，错误信息: {json_err}")
+    exit(1)
 
     # 其他错误处理逻辑    
 except Exception as e:
     print(f"预期外错误，错误信息: {e}")
+    exit(1)
 
 # 插入数据的SQL语句
 insert_data_query = '''
