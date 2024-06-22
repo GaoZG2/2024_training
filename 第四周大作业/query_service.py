@@ -107,7 +107,7 @@ async def get_image_path(image_name: str, request: Request):
     # 获取 URL
     image_url = request.url_for("download_image", image_name=image_name)
     # 返回图片的下载URL
-    return {"image_ur: ": image_url}
+    return {"image_url: ": image_url}
 
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=8000)
