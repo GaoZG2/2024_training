@@ -13,7 +13,7 @@ config = {
 conn = pymysql.connect(**config)
 cursor = conn.cursor()
 
-# 查询data_info表中的所有记录
+# 查询 data_info 表中的所有记录
 query = "SELECT * FROM data_info"
 cursor.execute(query)
 records = cursor.fetchall()

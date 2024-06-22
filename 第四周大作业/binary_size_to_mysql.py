@@ -13,7 +13,7 @@ config = {
 conn = pymysql.connect(**config)
 cursor = conn.cursor()
 
-# 查询data_info表中的所有记录，只查询id，image_path 和 pointcloud_path
+# 查询 data_info 表中的所有记录，只查询id，image_path 和 pointcloud_path
 query = "SELECT id, image_path, pointcloud_path FROM data_info"
 cursor.execute(query)
 records = cursor.fetchall()

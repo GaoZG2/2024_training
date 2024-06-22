@@ -10,7 +10,7 @@ import uvicorn
 # 创建 FastAPI 实例
 app = FastAPI(title="query service")
 
-# 定义类 DataInfo，与数据库中的data_info表进行交互
+# 定义类 DataInfo，与数据库中的 data_info 表进行交互
 Base = declarative_base()
 class DataInfo(Base):
     __tablename__ = 'data_info'
