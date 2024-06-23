@@ -1,7 +1,6 @@
 import pymysql
 import json
 
-# SQLAlchemy
 
 # 数据库连接配置
 config = {
